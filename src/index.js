@@ -5,7 +5,7 @@ import Overlay from './Overlay'
 
 createRoot(document.getElementById('root')).render(
   <>
-    <Overlay />
     <Canvas />
+    <Overlay />
   </>
 )

@@ -6,7 +6,7 @@ export default function Overlay() {
   const buttonRef = useRef(null)
 
   const onDeviceOrientation = (event) => {
-    const maxRotation = 23 * (Math.PI / 180)
+    const maxRotation = 30 * (Math.PI / 180)
     const deadZone = 0.5
 
     if (event.beta !== null && event.gamma !== null) {
@@ -86,7 +86,7 @@ export default function Overlay() {
   return (
     <div className="container">
       {/* <Particle /> */}
-      <div className="bg-image"></div>
+      {/* <div className="bg-image"></div> */}
       {/* <button id="permissionButton" className="ctaButton" ref={buttonRef}>
         $BASEDB
       </button> */}
