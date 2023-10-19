@@ -36,7 +36,7 @@ export default function PredatorCloakMaterial({ originalMaterial, gridWidth, gri
 
   useFrame((state, dt) => {
     uniforms.uTime.value += dt
-    easing.damp(uniforms.uProgress, 'value', hover ? 1.0 : 0.0, 1.2, dt)
+    easing.damp(uniforms.uProgress, 'value', hover ? 1.0 : 0.2, 1.2, dt)
   })
 
   return <CSM baseMaterial={baseMaterialCustom} uniforms={uniforms} vertexShader={Vert} fragmentShader={frag} silent envMapIntensity={6} />

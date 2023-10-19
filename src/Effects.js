@@ -12,32 +12,28 @@ export default function Effects() {
   return (
     <>
       <EffectComposer disableNormalPass multisampling={0}>
-        {/* <Bloom
+        <Bloom
           luminanceThreshold={0.67}
           radius={0.7}
           levels={5}
           intensity={0.8}
           mipmapBlur
-        /> */}
-        {/* <Autofocus target={[0, 0, 0]} bokehScale={5} /> */}
-        {/* <Vignette offset={0.8} darkness={0.45} /> */}
-        {/* <HueSaturation hue={0.1} saturation={0.4} /> */}
+        />
+        <Autofocus target={[0, 0, 0]} bokehScale={5} />
+        <Vignette offset={0.7} darkness={0.45} />
+        {/* <HueSaturation hue={5} saturation={50} lightness={1}/> */}
       </EffectComposer>
       <directionalLight
         shadow-mapSize={1024}
         shadow-bias={-0.001}
         shadow-normalBias={0.03}
         castShadow
-        position={[-25, 1, 30]}
-        intensity={2}
+        position={[-15, 1, 30]}
+        intensity={15}
       />
-      {/* <Environment
-        ground={{ height: 15, radius: 590, scale: 50 }}
-        files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/rainforest_trail_1k.hdr"
-      /> */}
       <Environment
-        ground={{ height: 100, radius: 590, scale: 200 }}
-        files="./fireplace_4k.hdr"
+        ground={{ height: -5, radius: 790, scale: 50 }}
+        files="./hdrs/moonlit_golf_4k.hdr"
       />
     </>
   )

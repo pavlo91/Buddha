@@ -136,10 +136,10 @@ export function Predator(props) {
       ref={myGroup}>
       <group scale={0.15}>
         <mesh geometry={buddhaChildren[0].geometry}>
-          <PredatorCloakMaterial gridWidth={60} gridHeight={50} hover={hover} originalMaterial={faceMaterial} color={0xbbbbbb} />
+          <PredatorCloakMaterial gridWidth={60} gridHeight={50} hover={hover} originalMaterial={faceMaterial} color={0x0a0a0a} />
         </mesh>
         <mesh geometry={buddhaChildren[1].geometry}>
-          <PredatorCloakMaterial gridWidth={60} gridHeight={50} hover={hover} originalMaterial={hairMaterial}  />
+          <PredatorCloakMaterial gridWidth={60} gridHeight={50} hover={hover} originalMaterial={hairMaterial} color={0x090909}  />
         </mesh>
         <mesh position={[0, 28, 15.6]}>
           <primitive object={ethModel.scene}  hover={hover} />

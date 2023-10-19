@@ -1,10 +1,6 @@
 import React, { useEffect, useRef } from 'react'
-import AudioMotionAnalyzer from 'audiomotion-analyzer'
-import Particle from './Particle'
 
 export default function Overlay() {
-  const buttonRef = useRef(null)
-
   const onDeviceOrientation = (event) => {
     const maxRotation = 30 * (Math.PI / 180)
     const deadZone = 0.5
@@ -46,53 +42,9 @@ export default function Overlay() {
       window.addEventListener('deviceorientation', onDeviceOrientation)
     }
   }
-
-  // const handleAudio = () => {
-  //   const audioMotion = new AudioMotionAnalyzer(document.getElementById('basedVisualizer'), {
-  //     source: document.getElementById('basedAudio'),
-  //     radial: false,
-  //     showScaleX: false,
-  //     mode: 0,
-  //     channelLayout: 'stereo',
-  //     frequencyScale: 'bark',
-  //     gradient: 'rainbow',
-  //     linearAmplitude: true,
-  //     linearBoost: 1.5,
-  //     maxFreq: 20000,
-  //     minFreq: 20,
-  //     mirror: 0,
-  //     overlay: false,
-  //     reflexAlpha: 1,
-  //     reflexBright: 1,
-  //     reflexFit: true,
-  //     reflexRatio: 0.5,
-  //     showPeaks: true,
-  //     weightingFilter: 'D'
-  //   })
-  //   window.document.getElementById('basedAudio').play()
-  //   buttonRef.current.style.display = 'none'
-  //   requestOrientationPermission()
-  // }
-
-  // useEffect(() => {
-  //   const element = buttonRef.current
-  //   if (!element) return
-  //   element.addEventListener('click', handleAudio)
-  //   return () => {
-  //     element.removeEventListener('click', handleAudio)
-  //   }
-  // }, [])
-
   return (
     <div className="container">
-      {/* <Particle /> */}
-      {/* <div className="bg-image"></div> */}
-      {/* <button id="permissionButton" className="ctaButton" ref={buttonRef}>
-        $BASEDB
-      </button> */}
-      <div id="basedVisualizer" className="overlay">
-        <audio id="basedAudio" src="./song.mp3" loop />
-      </div>
+      
     </div>
   )
 }
