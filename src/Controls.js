@@ -9,10 +9,10 @@ function Controls() {
       <OrbitControls
         ref={orbitControls}
         minDistance={1}
-        maxDistance={4}
+        maxDistance={10}
         target={[-0.05, 1.35, 0]}
         maxPolarAngle={Math.PI / 1.8}
-        enablePan={false}
+        enablePan={true}
         enableZoom={true}
         enableRotate={true}
       />
